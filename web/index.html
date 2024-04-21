@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="font-semibold mb-10 text-5xl bg-gradient-to-r from-blue-600 via-red-500 to-white-400 text-transparent bg-clip-text">Detector de noticias falsas</h1>
+      <textarea class="max-w-[800px] w-[800px] h-[500px] resize-none p-10 rounded-lg" placeholder="Ingresar noticias" spellcheck="false"></textarea>
+      <div>
+        <button id="detect" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-10">Detectar</button>
+        <button id="clear" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-10">Borrar</button>
+      </div>
+      <div class="mt-2 hidden" id="probability">
+        Probilidad de ser falsa: <span class="text-2xl" id="score">0%</span>
+      </div>
+      <div id="true" class="bg-green-600 rounded-md hidden">
+        <p class="text-2xl mt-10 p-2 ">La noticias es verdadera</p>
+      </div>
+      <div id="false" class="bg-red-600 rounded-md hidden">
+        <p class="text-2xl mt-10 p-2 ">La noticias es falsa</p>
+      </div>
+      
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
