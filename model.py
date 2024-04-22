@@ -1,5 +1,4 @@
 from joblib import load
-from sklearn.feature_extraction.text import TfidfVectorizer
 # Cargar el modelo entrenado
 
 def model(news):
